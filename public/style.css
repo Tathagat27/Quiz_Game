@@ -242,10 +242,14 @@ body{
 
 .box{
     border-radius: 10px;
-    left: 38%;
+    left: 33%;
     top: 13vh;
-    width: 25vw;
+    height: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    margin-bottom: 5vh;
     padding: 2vh 3vw;
     background:linear-gradient(40deg,rgb(17, 23, 107),rgb(6, 6, 7)) ;
     
@@ -253,7 +257,7 @@ body{
 
 .box:hover{
     border-radius: 12px;
-    font-size: 2.8rem;
+    font-size: 2vw;
     font-weight: 500.2;
     transform: scale(1.02, 1.02);
     cursor: default;
@@ -654,8 +658,6 @@ footer button.show{
 
     height: 50vh;
     width: 50vw;
-
-    background-color: orange;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -664,7 +666,6 @@ footer button.show{
 
 .result_box .icon{
     flex: 1;
-    background-color: red;
     height: 35vh;
     width: 40vw;
     display: flex;
@@ -763,7 +764,7 @@ footer button.show{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-145%, 260%);
+    transform: translate(145%, 260%);
 }
 
 .buttons button.Update:hover{

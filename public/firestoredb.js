@@ -45,7 +45,7 @@ async function getuserInfoRealtime(userID){
             const userInfo = doc.data()
             if(userInfo){
                 userDetails.innerHTML = `<span class="box">
-                <h5 style="color:white;"> Welcome <p style="font-size:35px;font-weight: 800;color:cyan;margin-top:1.5vh;">${userInfo.name}</p></h5>
+                <h5 style="color:white;"> Welcome... <span style="font-size:35px;font-weight: 800;color:cyan;margin-top:1.5vh;">${userInfo.name} 👋🏻</span></h5>
                 <h4 style="color:white;">Your Points : <span style="font-size:35px;font-weight: 800;color:purple;">${userInfo.points}</span></h4>
                 </span>             `
                 x=userInfo.points;
@@ -83,6 +83,10 @@ function updateUserProfile(e){
 }
 
 updated.onclick = (event)=>{
-    updateUserProfile();
-    
+    updateUserProfile(event);
+    document.querySelector(".buttons .Update").style.display = "none";
+    setTimeout(() => {
+        window.location.reload();  
+    }, 1000);
+   
 }

@@ -73,15 +73,15 @@ let counterLine;
 let widthValue = 0;
 
 
-const quit_quiz = result_box.querySelector(".buttons .quit");
+// const quit_quiz = result_box.querySelector(".buttons .quit");
 
 
 // if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
+// quit_quiz.onclick = ()=>{
     
-    window.location.reload();    //reload the current window
+//     window.location.reload();    //reload the current window
     
-}
+// }
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
@@ -172,6 +172,7 @@ function showResult(){
     score();
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
+    document.querySelector(".buttons .quit").style.display = "none"; //hide home button
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 30){ // if user scored more than 3
